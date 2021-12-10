@@ -13,7 +13,9 @@ public class ExampleController {
 
     @GetMapping
     public Map<String, String> getSomeStuff() {
-        return Map.of("name", "tony",
-                "age", "none of your business");
+        return Map.of(
+                "name", "tony",
+                "age", "none of your business",
+                "favouriteCheese", "manchego");
     }
 }
