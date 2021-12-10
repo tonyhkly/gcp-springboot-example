@@ -1,10 +1,7 @@
 FROM openjdk:17-jdk-alpine
 
-WORKDIR /app
-COPY . .
+ARG JAR_FILE=gcp-springboot-example-0.0.1-SNAPSHOT.jar
 
-RUN ./gradlew build -x test
+COPY ${JAR_FILE} app.jar
 
-COPY build/libs/gcp-springboot-example-0.0.1-SNAPSHOT.jar gcp-springboot-example-0.0.1-SNAPSHOT.jar
-
-ENTRYPOINT ["java","-jar","/gcp-springboot-example-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-Djava.security.edg=file:/dev/./urandom","-jar","/app.jar"]
