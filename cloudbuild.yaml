@@ -1,5 +1,5 @@
 steps:
-  - - name: gradle:7.3.1-jdk17
+  - name: gradle:7.3.1-jdk17
       entrypoint: gradle
       args: [ "build -x test" ]
   - name: gcr.io/cloud-builders/docker
