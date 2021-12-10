@@ -1,7 +1,7 @@
 steps:
   - name: gradle:7.3.1-jdk17
     entrypoint: gradle
-    args: [ "build -x test" ]
+    args: ["assemble"]
   - name: gcr.io/cloud-builders/docker
     args: ['build', '-t', 'gcr.io/hackathon-practice-334716/gcp-springboot-example', '--build-arg=JAR_FILE=build/libs/gcp-springboot-example-0.0.1-SNAPSHOT.jar', '.']
     images: ['gcr.io/hackathon-practice-334716/gcp-springboot-example']
