@@ -11,7 +11,7 @@ public class ExampleController {
 
     @GetMapping("/")
     public String getHomePage() {
-        return "<html><body><h1>Hello Tony...</h1></body></html>";
+        return "<html><body><h1>Hello Tony...!!</h1></body></html>";
     }
 
     @GetMapping("/example")
