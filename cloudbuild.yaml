@@ -12,5 +12,5 @@ steps:
   # Deploy container image to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
-    args: ['run', 'deploy', 'gcp-springboot-example', '--image', 'gcr.io/hackathon-practice-334716/gcp-springboot-example', '--region', 'europe-west1']
+    args: ['run', 'deploy', 'gcp-springboot-example-test', '--image', 'gcr.io/hackathon-practice-334716/gcp-springboot-example', '--region', 'europe-west1']
 images: ['gcr.io/hackathon-practice-334716/gcp-springboot-example']
